@@ -239,7 +239,10 @@ resolve this.
 
 ### Webpack fails in development with "command not found"
 
-Occasionally I have issues around this, seemingly caused by us mounting /app/node_modules as a data volume, and so it not picking up changes. Deleting this line from `docker-compose.yml` running, then adding back and running again seems to resolve.
+Occasionally I have issues around this, seemingly caused by mounting
+`/app/node_modules` as a data volume, and it therefore not picking up changes.
+Deleting this volume from `docker-compose.yml`, running `docker-compose up`,
+adding the volume back and running `docker-compose up` again seems to resolve.
 
 ### Webpack fails in production with "command not found"
 
