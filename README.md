@@ -237,7 +237,7 @@ alternative driver, or a solution like
 [Docker for Mac](https://docs.docker.com/engine/installation/mac/) should
 resolve this.
 
-### Webpack fails with "command not found"
+### Webpack fails on production with "command not found"
 
 Check your NODE_ENV. We need to install `devDependencies` in order to run
 webpack etc on the server, so we should not set `NODE_ENV=production` (note we
