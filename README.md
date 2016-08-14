@@ -1,7 +1,7 @@
 # Phoenix/Webpack/Docker/Elastic Beanstalk starter pack
 
 This project aims to create a simple and repeatable solution for getting up and
-running with dev and production [Phoenix](www.phoenixframework.org)
+running with dev and production [Phoenix](https://www.phoenixframework.org)
 environments.
 
 This approach swaps out brunch for [webpack](https://webpack.github.io/) (with
