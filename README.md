@@ -29,8 +29,46 @@ $ cp -a .ebextensions/ path_to_project/
 $ cp .dockerignore \
      Docker* \
      docker-compose.yml \
-     package.json \
      webpack.config.js path_to_project/
+```
+
+Ensure you have all the `dependencies` and `devDependencies` from our
+package.json in yours, and remove any brunch dependencies. If you're using the
+default package.json (you've not added/removed any libs) you can just drop ours
+in, and the diff should look something like this:
+
+```diff
+ {
+   "repository": {},
++  "scripts": {
++    "start": "webpack --watch-stdin --progress --color",
++    "compile": "NODE_ENV=production webpack -p"
+   },
+   "dependencies": {
+-    "brunch": "^1.8.5",
+-    "babel-brunch": "^5.1.1",
+-    "clean-css-brunch": ">= 1.0 < 1.8",
+-    "css-brunch": ">= 1.0 < 1.8",
+-    "javascript-brunch": ">= 1.0 < 1.8",
+-    "uglify-js-brunch": ">= 1.0 < 1.8"
++    "phoenix": "file:deps/phoenix",
++    "phoenix_html": "file:deps/phoenix_html"
++  },
++  "devDependencies": {
++    "babel-core": "^6.13.2",
++    "babel-loader": "^6.2.4",
++    "babel-preset-es2015": "^6.13.2",
++    "bootstrap-sass": "^3.3.7",
++    "copy-webpack-plugin": "^3.0.1",
++    "css-loader": "^0.23.1",
++    "extract-text-webpack-plugin": "^1.0.1",
++    "file-loader": "^0.9.0",
++    "node-sass": "^3.8.0",
++    "sass-loader": "^4.0.0",
++    "style-loader": "^0.13.1",
++    "url-loader": "^0.5.7",
++    "webpack": "^1.13.1"
+ }
 ```
 
 Update database configuration to point to postgres host in `docker-compose.yml`.
