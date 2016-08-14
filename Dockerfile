@@ -26,7 +26,7 @@ RUN npm install
 # Install app
 WORKDIR /app
 ADD . .
-RUN cp -a /tmp/node_modules ./node_modules
+RUN cp -a /tmp/node_modules .
 RUN mix compile
 
 # Compile assets
