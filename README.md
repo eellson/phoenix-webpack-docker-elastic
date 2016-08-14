@@ -237,7 +237,11 @@ alternative driver, or a solution like
 [Docker for Mac](https://docs.docker.com/engine/installation/mac/) should
 resolve this.
 
-### Webpack fails on production with "command not found"
+### Webpack fails in development with "command not found"
+
+Occasionally I have issues around this, seemingly caused by us mounting /app/node_modules as a data volume, and so it not picking up changes. Deleting this line from `docker-compose.yml` running, then adding back and running again seems to resolve.
+
+### Webpack fails in production with "command not found"
 
 Check your NODE_ENV. We need to install `devDependencies` in order to run
 webpack etc on the server, so we should not set `NODE_ENV=production` (note we
