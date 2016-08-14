@@ -24,7 +24,7 @@ Now clone this repo:
 Copy files into project directory:
 
 ```bash
-$ cd phoenix_starter
+$ cd phoenix-webpack-docker-elastic
 $ cp -a .ebextensions/ path_to_project/
 $ cp .dockerignore \
      Docker* \
