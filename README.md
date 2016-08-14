@@ -33,8 +33,8 @@ $ cp .dockerignore \
 ```
 
 Ensure you have all the `dependencies` and `devDependencies` from our
-package.json in yours, and remove any brunch dependencies. If you're using the
-default package.json (you've not added/removed any libs) you can just drop ours
+`package.json` in yours, and remove any brunch dependencies. If you're using the
+default `package.json` (you've not added/removed any libs) you can just drop ours
 in, and the diff should look something like this:
 
 ```diff
@@ -101,7 +101,7 @@ config :name_of_project, PhoenixStarter.Endpoint,
 +  watchers: [npm: ["start", cd: Path.expand("../", __DIR__)]]
 ```
 
-We also assume you'll want to use sass, compiles to css by webpack, so update
+We also assume you'll want to use sass, compiled to css by webpack, so update
 your original plain css:
 
 ```bash
