@@ -9,6 +9,11 @@ sass and ES2015 support), makes use of [Docker](https://www.docker.com/) to
 allow devs to get their environment up and running easily, and is ready for
 deployment on [Elastic Beanstalk](http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/Welcome.html).
 
+*Note: I wouldn't necessarily recommend this approach for all apps, as Docker
+blocks certain Elixir features from the outset. I've posted an outline of those,
+along with a method of deploying without Docker, in this post:
+[Elixir deployments on AWS](https://medium.com/mint-digital/elixir-deployments-on-aws-ee787aa02a9d).*
+
 ## Getting started
 
 First look at the [Gotchas](#gotchas) section for common issues.
